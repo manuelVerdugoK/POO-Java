@@ -1,5 +1,8 @@
 package main.java.ejercicios;
 
+import main.java.ejercicios.Exceptions.RolException;
+import main.java.ejercicios.Exceptions.SalarioException;
+
 public class Empleado extends Persona implements Trabajador {
     private String cargo;
     private double salario;
@@ -39,12 +42,19 @@ public class Empleado extends Persona implements Trabajador {
     }
 
     @Override
-    public double calcularSueldo(){
+    public double calcularSueldo() {
+        if (getSalario() < 1) {
+            throw new SalarioException("El salario está fuera de rango.");
+        }
         double impuesto = 0.25;
-        return (getSalario() - (getSalario()*impuesto));
+        return getSalario() - (getSalario() * impuesto);
     }
+
     @Override
     public String obtenerRol(){
+        if (getCargo().length() < 1){
+            throw new RolException("El cargo está fuera de rango.");
+        }
         return "Rol:"+getCargo();
     }
 }
