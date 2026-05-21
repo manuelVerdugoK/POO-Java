@@ -29,7 +29,7 @@ class CuentaAhorro extends CuentasBancarias{
         super(nombre, numeroCuenta, saldo);
         this.rentabilidad = rentabilidad;
     }
-
+    @Override
     public void presentarse(){
         System.out.printf("Nombre cuenta: %s \nNumero cuenta: %d\nSaldo: %f\nTipo Rentabilidad:%s", nombreCuenta, numeroCuenta, saldo, rentabilidad);
     }
