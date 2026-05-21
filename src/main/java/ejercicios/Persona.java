@@ -1,5 +1,8 @@
 package main.java.ejercicios;
 
+import javax.print.attribute.HashPrintRequestAttributeSet;
+import java.util.Objects;
+
 public class Persona {
     private String nombre;
     private int edad;
@@ -18,6 +21,19 @@ public class Persona {
                 ", edad=" + edad +
                 ", sexo=" + sexo +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object x){
+        if(this == x) return true;
+        if (!(x instanceof Persona)) return false;
+        Persona per = (Persona) x;
+        return edad == per.edad && nombre.equals(per.nombre);
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(nombre, edad);
     }
 
     public String presentarse(){
