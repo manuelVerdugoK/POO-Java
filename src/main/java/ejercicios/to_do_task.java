@@ -78,24 +78,24 @@ class Task extends Event{
 }
 
 class Calendar extends Event{
-    private Date Fecha;
+    private Date fecha;
 
     public Calendar(String nombre, String descripcion, Date fecha) {
         super(nombre, descripcion, eventType.CALENDAR);
-        Fecha = fecha;
+        fecha = fecha;
     }
 
     public Date getFecha() {
-        return Fecha;
+        return fecha;
     }
 
     public void setFecha(Date fecha) {
-        Fecha = fecha;
+        fecha = fecha;
     }
 
     @Override
     public String presentarEvento(){
-        return presentarEvento() + "fecha:"+fecha;
+        return presentarEvento() + "fecha:"+ fecha;
     }
 }
 
