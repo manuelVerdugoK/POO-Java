@@ -19,6 +19,28 @@ abstract class CuentasBancarias{
     public abstract void presentarse();
     public abstract void mostrarSaldo();
     public abstract double calcularIntereses();
+
+    public int getCuenta(){
+        return this.numeroCuenta;
+    }
+    public double getSaldo() { return this.saldo;}
+    public void setSaldo(double saldo) {this.saldo = saldo;}
+
+    public double aumentarSaldo(double nuevoMonto){
+        double montoExistente = getSaldo();
+        double nuevoSaldo = montoExistente+nuevoMonto;
+        setSaldo(nuevoSaldo);
+        return getSaldo();
+    }
+    public double retirarSaldo(double saldoRetirar){
+        if (saldoRetirar> this.saldo){
+            throw new RuntimeException("Saldo insuficiente para realizar esta operación");
+        } else{
+            double nuevoMonto = this.saldo - saldoRetirar;
+            setSaldo(nuevoMonto);
+        }
+        return getSaldo();
+    }
 }
 
 class CuentaAhorro extends CuentasBancarias{
