@@ -1,7 +1,5 @@
-package main.java.ejercicios;
-
-import main.java.ejercicios.Exceptions.RolException;
-import main.java.ejercicios.Exceptions.SalarioException;
+// ejercicios/Empleado.java
+package main.java.ejercicios.deprecated;
 
 public class Empleado extends Persona implements Trabajador {
     private String cargo;

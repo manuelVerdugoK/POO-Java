@@ -1,4 +1,4 @@
-package main.java.ejercicios.Exceptions;
+package main.java.ejercicios.deprecated;
 
 public class SalarioException extends RuntimeException{
     public SalarioException(String mensaje){

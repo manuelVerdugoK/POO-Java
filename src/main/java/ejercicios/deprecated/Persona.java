@@ -1,6 +1,6 @@
-package main.java.ejercicios;
+// ejercicios/Persona.java
+package main.java.ejercicios.deprecated;
 
-import javax.print.attribute.HashPrintRequestAttributeSet;
 import java.util.Objects;
 
 public class Persona {
