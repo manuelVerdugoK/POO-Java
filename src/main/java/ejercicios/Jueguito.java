@@ -21,6 +21,7 @@ abstract class Character implements ICharacter {
         this.hp = hp;
         this.damage = damage;
     }
+    public TypeCharacter getType(){return this.type;}
     public boolean getStatus(){return this.isDead;}
     public int getHp(){return this.hp;}
     public void reduceHp(int valor){
