@@ -10,14 +10,14 @@ interface ICharacter {
 }
 abstract class Character implements ICharacter {
     TypeCharacter type;
-    String name;
+    String charClass;
     int hp;
     int damage;
     boolean isDead = false;
 
     public Character(TypeCharacter type, String name, int hp, int damage) {
         this.type = type;
-        this.name = name;
+        this.charClass = name;
         this.hp = hp;
         this.damage = damage;
     }
@@ -31,7 +31,7 @@ abstract class Character implements ICharacter {
     }
     public void incrementHp(int valor){ this.hp = (this.hp + valor);}
     public int getAtackDamage(){return this.damage;};
-    public String getName(){return this.name;};
+    public String getCharNameClass(){return this.charClass;};
 }
 class Monster extends Character{
     public Monster(TypeCharacter type, String name, int hp, int damage) {
@@ -85,9 +85,9 @@ public class Jueguito {
             if (haveWinner){
                 System.out.println("Match ended");
                 if ( player1.getStatus()){
-                    System.out.println("Winner was " + monster1.getName());
+                    System.out.println("Winner was " + monster1.getCharNameClass());
                 } else{
-                    System.out.println("Winner was  " + player1.getName());
+                    System.out.println("Winner was  " + player1.getCharNameClass());
                 }
             } else{
                 System.out.println(" === Round finished ===");
