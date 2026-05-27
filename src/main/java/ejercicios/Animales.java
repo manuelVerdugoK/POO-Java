@@ -1,4 +1,4 @@
-package main.java.ejercicios.deprecated;
+package main.java.ejercicios;
 enum TipoAnimal{
     GATO, PERRO
 }
