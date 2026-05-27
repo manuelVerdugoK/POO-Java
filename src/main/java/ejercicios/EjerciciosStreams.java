@@ -30,8 +30,8 @@ public class EjerciciosStreams {
         // el indice i inicializa en 0,
         // el indice se compara con una expresión o variable del mismo tipo.
         // el indice se acumula.
-        for (int i =0; i< nombres.size(); i++){
-            System.out.println(nombres.get(i));
+        for (String s : nombres) {
+            System.out.println(s);
         }
 
         // solo mayor que 4 letras.
