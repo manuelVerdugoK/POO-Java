@@ -127,7 +127,7 @@ class Empleado extends Persona implements Trabajador {
 
     @Override
     public double calcularSueldo() {
-        if (getSalario() < 1) {
+        if (getSalario() <= 0) {
             throw new SalarioException("El salario está fuera de rango.");
         }
         double impuesto = 0.25;
@@ -136,7 +136,8 @@ class Empleado extends Persona implements Trabajador {
 
     @Override
     public String obtenerRol(){
-        if (getCargo().length() < 1){
+
+        if (getCargo().isBlank()){
             throw new RolException("El cargo está fuera de rango.");
         }
         return "Rol:"+getCargo();
